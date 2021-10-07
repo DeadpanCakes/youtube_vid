@@ -1,0 +1,19 @@
+.dropdown {
+  border-radius: 5px;
+  padding: 7px 0;
+  box-shadow: 1px 1px 5px gray;
+  min-width: 120px;
+}
+
+.dropdownItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    max-height: 30px;
+}
+
+.dropdownItem:hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
