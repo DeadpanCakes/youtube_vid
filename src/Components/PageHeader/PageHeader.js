@@ -1,13 +1,11 @@
+import SearchBar from "../SearchBar/SearchBar";
+
 const PageHeader = () => {
   return (
     <header>
       <button>Hamburger</button>
       <h1>Logo</h1>
-      <form className="searchBar">
-          <input></input>
-          <button>Search</button>
-          <button>Voice</button>
-      </form>
+      <SearchBar />
       <nav className="accountNav">
         <button>Apps</button>
         <button>Settings</button>
