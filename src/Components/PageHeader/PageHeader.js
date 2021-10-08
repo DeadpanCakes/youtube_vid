@@ -1,4 +1,5 @@
 import SearchBar from "../SearchBar/SearchBar";
+import AccountNav from "../AccountNav/AccountNav";
 
 const PageHeader = () => {
   return (
@@ -11,6 +12,7 @@ const PageHeader = () => {
         <button>Settings</button>
         <button>Sign In</button>
       </nav>
+      <AccountNav />
     </header>
   );
 };
