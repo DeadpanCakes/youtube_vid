@@ -3,14 +3,29 @@ import Dropdown from "../Dropdown/Dropdown";
 import { useState } from "react";
 
 const AccountNav = () => {
-  const [dropdownShowing, setShowing] = useState(false);
-  const toggleDropdown = () => setShowing((prevShowing) => !prevShowing);
+  const [appsShowing, setAppsShowing] = useState(false);
+  const toggleApps = () => setAppsShowing((prevShowing) => !prevShowing);
+  const [settingsShowing, setSettingsShowing] = useState(false);
+  const toggleSettings = () =>
+    setSettingsShowing((prevShowing) => !prevShowing);
 
   return (
     <nav>
       <span>
-        <button onClick={toggleDropdown}>Settings</button>
-        {dropdownShowing ? (
+        <button onClick={toggleApps}>Apps</button>
+        {appsShowing ? (
+          <Dropdown alignment="start">
+            <li>YouTube TV</li>
+            <li>YouTube Music</li>
+            <li>YouTube Kids</li>
+            <li>Creator Academy</li>
+            <li>YouTube for Artists</li>
+          </Dropdown>
+        ) : null}
+      </span>
+      <span>
+        <button onClick={toggleSettings}>Settings</button>
+        {settingsShowing ? (
           <Dropdown alignment="start">
             <li>Appearance: Device theme</li>
             <li>Language: English</li>
