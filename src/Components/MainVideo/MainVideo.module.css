@@ -1,5 +1,8 @@
 .mainVid {
   max-width: 1280px;
+  margin-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
 }
 
 .vidInfo {
