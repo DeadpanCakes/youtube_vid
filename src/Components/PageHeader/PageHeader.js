@@ -5,8 +5,17 @@ import style from "./PageHeader.module.css";
 const PageHeader = () => {
   return (
     <header className={style.pageHeader}>
-      <button>Hamburger</button>
-      <h1>Logo</h1>
+      <span
+        style={{
+          flexGrow: 1,
+          display: "flex",
+          marginLeft: 10,
+          alignItems: "center",
+        }}
+      >
+        <button style={{ height: 40 }}>Hamburger</button>
+        <h1>YouTube</h1>
+      </span>
       <SearchBar />
       <AccountNav />
     </header>

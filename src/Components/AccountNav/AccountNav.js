@@ -35,7 +35,7 @@ const AccountNav = () => {
   }, []);
 
   return (
-    <nav>
+    <nav className={style.accountNav}>
       <span>
         <button
           onClick={toggleApps}

@@ -1,3 +1,11 @@
+.accountNav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
+}
+
 .navBtns {
   min-height: 40px;
   max-height: 40px;
