@@ -1,9 +1,10 @@
 import SearchBar from "../SearchBar/SearchBar";
 import AccountNav from "../AccountNav/AccountNav";
+import style from "./PageHeader.module.css";
 
 const PageHeader = () => {
   return (
-    <header>
+    <header className={style.pageHeader}>
       <button>Hamburger</button>
       <h1>Logo</h1>
       <SearchBar />
