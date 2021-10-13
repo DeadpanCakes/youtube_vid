@@ -1,8 +1,15 @@
+.navBtns {
+  min-height: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+}
+
 .signIn {
   font-size: 1.5em;
   color: blue;
   border: 1px solid blue;
   background-color: white;
-  padding: 10px;
   border-radius: 2px;
+  min-height: 40px;
+  max-height: 40px;
 }

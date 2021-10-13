@@ -1,18 +1,48 @@
 import style from "./AccountNav.module.css";
 import Dropdown from "../Dropdown/Dropdown";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AccountNav = () => {
   const [appsShowing, setAppsShowing] = useState(false);
   const toggleApps = () => setAppsShowing((prevShowing) => !prevShowing);
+  const minimizeApps = () => setAppsShowing(false);
   const [settingsShowing, setSettingsShowing] = useState(false);
   const toggleSettings = () =>
     setSettingsShowing((prevShowing) => !prevShowing);
+  const minimizeSettings = () => setSettingsShowing(false);
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      const { target } = event;
+      if (target.classList.contains(style.navBtns)) {
+        if (!target.classList.contains(style.appsBtn)) {
+          minimizeApps();
+          console.log("apps");
+        }
+        if (!target.classList.contains(style.settingsBtn)) {
+          console.log("settings");
+          minimizeSettings();
+        }
+      } else {
+        minimizeApps();
+        minimizeSettings();
+      }
+    };
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   return (
     <nav>
       <span>
-        <button onClick={toggleApps}>Apps</button>
+        <button
+          onClick={toggleApps}
+          className={`${style.appsBtn} ${style.navBtns}`}
+        >
+          Apps
+        </button>
         {appsShowing ? (
           <Dropdown alignment="start">
             <li>YouTube TV</li>
@@ -24,7 +54,12 @@ const AccountNav = () => {
         ) : null}
       </span>
       <span>
-        <button onClick={toggleSettings}>Settings</button>
+        <button
+          onClick={toggleSettings}
+          className={`${style.settingsBtn} ${style.navBtns}`}
+        >
+          Settings
+        </button>
         {settingsShowing ? (
           <Dropdown alignment="start">
             <li>Appearance: Device theme</li>

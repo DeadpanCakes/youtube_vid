@@ -3,7 +3,6 @@ import style from "./Dropdown.module.css";
 
 const Dropdown = ({ children, alignment }) => {
   const styledChildren = children.map((child, key) => {
-    console.log(key);
     return cloneElement(child, {
       key,
       className: style.dropdownItem,
