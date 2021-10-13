@@ -1,7 +1,9 @@
+import style from "./RecommendedVid.module.css";
+
 const RecommendedVid = (props) => {
   const { imgSrc, imgDesc, title, channel, views, date } = props;
   return (
-    <li>
+    <li className={style.recommendedVid}>
       <img src={imgSrc} alt={imgDesc} />
       <div>
         <h4>

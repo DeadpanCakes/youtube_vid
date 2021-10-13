@@ -1,0 +1,9 @@
+.recommendedVid {
+  min-width: 408px;
+  min-height: 94px;
+  max-width: 408px;
+  max-height: 94px;
+  display: flex;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
