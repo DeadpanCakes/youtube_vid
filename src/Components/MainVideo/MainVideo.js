@@ -1,4 +1,5 @@
 import style from "./MainVideo.module.css";
+import channelImg from "../../Assets/jubilee.jpg";
 import { useState } from "react";
 
 const MainVideo = () => {
@@ -36,7 +37,13 @@ const MainVideo = () => {
       </div>
       <div className={style.vidDesc}>
         <div className={style.descInfo}>
-          <img alt="The Jubilee album cover"></img>
+          <a href="https://www.youtube.com/channel/UC7RgHJCaozoM7mdjmJmca4Q">
+            <img
+              alt="The Jubilee album cover"
+              src={channelImg}
+              className={style.channelImg}
+            ></img>
+          </a>
           <h2>Japanese Breakfast</h2>
           <h4>82.9k Subscribers</h4>
           <div>

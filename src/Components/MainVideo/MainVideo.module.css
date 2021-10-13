@@ -21,6 +21,19 @@
 
 .vidDesc {
   display: flex;
+  justify-content: space-between;
+}
+
+.channelImg {
+  max-height: 48px;
+  max-width: 48px;
+  border-radius: 48px;
+}
+
+.descInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .subscribeBtn {
@@ -31,4 +44,5 @@
   width: 110px;
   height: 37px;
   font-size: 18px;
+  margin-right: 20px;
 }
