@@ -1,0 +1,34 @@
+.mainVid {
+  max-width: 1280px;
+}
+
+.vidInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.vidTitle {
+  align-self: flex-start;
+}
+
+.vidDetails {
+  display: flex;
+}
+
+.controls {
+  margin-left: auto;
+}
+
+.vidDesc {
+  display: flex;
+}
+
+.subscribeBtn {
+  color: white;
+  background-color: red;
+  border-radius: 2px;
+  border: none;
+  width: 110px;
+  height: 37px;
+  font-size: 18px;
+}
